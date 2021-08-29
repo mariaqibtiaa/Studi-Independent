@@ -1,0 +1,75 @@
+    body {
+        background-color: #f7f7f7;
+    }
+    
+    nav {
+        width: 100%;
+        padding: 14px 16px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: white;
+    }
+    
+    nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .content {
+        height: 230px;
+        background-color: white;
+        margin: 30px;
+        display: flex;
+    }
+    
+    .content>div {
+        padding: 30px;
+    }
+    
+    .btn {
+        background-color: white;
+        color: black;
+        padding: 10px 25px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .kontak {
+        background-color: blue;
+        color: white;
+    }
+    
+    .resume {
+        border: 2px solid #04AA6D;
+        color: green;
+    }
+    
+    .resume:hover {
+        background-color: #04AA6D;
+        color: white;
+    }
+    
+    .form {
+        height: 420px;
+        background: white;
+        margin: 50px;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        width: 97%;
+        padding: 5px;
+        margin: 5px;
+    }
+    
+    .form .submit {
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        background-color: green;
+        font-size: 15px;
+        color: #fafafa;
+        margin-top: 15px;
+        cursor: pointer;
+    }
