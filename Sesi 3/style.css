@@ -19,7 +19,7 @@
     .content {
         height: 230px;
         background-color: white;
-        margin: 30px;
+        margin: 50px;
         display: flex;
     }
     
@@ -29,7 +29,6 @@
     
     .btn {
         background-color: white;
-        color: black;
         padding: 10px 25px;
         cursor: pointer;
         border-radius: 5px;
