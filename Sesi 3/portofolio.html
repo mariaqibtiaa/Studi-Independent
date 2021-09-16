@@ -2,74 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Portofolio</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">PRODUCT</a>
-        <a href="#">GALERY</a>
-        <a href="#">BLOG</a>
-        <a href="#">INVENTORY</a>
-    </nav>
-    <div class="content">
-        <div class="logo">
-            <br/>
-            <img src="logo.png" alt="Profile" width="150" height="150">
-        </div>
-        <div class="user">
-            <h2><b>Maria Qibtia</b></h2>
-            <p>Front End Designer</p>
-            <br/>
-            <button class="btn edit" onclick="show()">Edit</button>
-            <button class="btn resume">Resume</button>
-        </div>
-        <div class="data">
-            <p><b>Availability</b></p>
-            <p><b>Usia</b></p>
-            <p><b>Lokasi</b></p>
-            <p><b>Pengalaman</b></p>
-            <p><b>Email</b></p>
-        </div>
-        <div class="data1">
-            <p>Full Time</p>
-            <p>21</p>
-            <p>Bekasi</p>
-            <p>2</p>
-            <p>email@gmail.com</p>
+    <div class="container">
+        <!-- navbar -->
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">INVENTORY</a></li>
+            </ul>
+
+            <div class="dropdown">
+                <button onclick="myMenu()" class="menu">Menu</button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <a href="#">HOME</a>
+                    <a href="#">PRODUCT</a>
+                    <a href="#">GALLERY</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">INVENTORY</a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="content">
+                <div class="card" id="img">
+                    <img src="./logo.png" alt="avatar" />
+                </div>
+                <div class="card" id="name">
+                    <h2 id="nama">Maria Qibtia</h2>
+                    <p id="role">Front End Designer</p>
+                    <div>
+                        <button onclick="myForm();editData()" class="btn kontak">Edit</button>
+                        <button class="btn resume">Resume</button>
+                    </div>
+                </div>
+
+                <!-- form hasil -->
+                <div class="card" id="ket">
+                    <p><b>Availability</b></p>
+                    <p><b>Usia</b></p>
+                    <p><b>Lokasi</b></p>
+                    <p><b>Pengalaman</b></p>
+                    <p><b>Email</b></p>
+                </div>
+                <div class="card" id="answer">
+                    <p id="availability">Full Time</p>
+                    <p id="usia">19</p>
+                    <p id="lokasi">Jakarta</p>
+                    <p id="year">2</p>
+                    <p id="email">email@gmail.com</p>
+                </div>
+            </div>
+        </main>
+        <!-- form input -->
+        <div class="form">
+            <form id="form" class="form-content">
+                <label for="Name"> Nama</label>
+                <input id="namaForm" type="text" placeholder="enter your name" />
+                <label for="Role">Role</label>
+                <input id="roleForm" type="text" placeholder="enter your role" />
+                <label for="Availability">Availability</label>
+                <input id="availabilityForm" type="text" placeholder="enter your availability" />
+                <label for="Usia">Usia</label>
+                <input id="usiaForm" type="text" placeholder="enter your age" />
+                <label for="Lokasi">Lokasi</label>
+                <input id="lokasiForm" type="text" placeholder="enter your location" />
+                <label for="Years Experience">Years Experience</label>
+                <input id="yearForm" type="text" placeholder="enter your years experience" />
+                <label for="Email">Email</label>
+                <input id="emailForm" type="email" placeholder="enter your email" />
+
+                <button type="button" id="submit" onclick="ubahTeks()">Submit</button>
+            </form>
         </div>
     </div>
-    <div class="form" id="form">
-        <form method="GET" id="edit">
-            <label>Nama</label><br/>
-            <input type="text" id="namaForm">
-            <br/>
-            <label>Role</label><br/>
-            <input type="text" id="roleForm">
-            <br/>
-            <label>Availability</label><br/>
-            <input type="text" id="availForm">
-            <br/>
-            <label>Usia</label><br/>
-            <input type="text" id="usiaForm">
-            <br/>
-            <label>Lokasi</label><br/>
-            <input type="text" id="lokasiForm">
-            <br/>
-            <label>Years Experience</label><br/>
-            <input type="text" id="yearsExperience">
-            <br/>
-            <label>Email</label><br/>
-            <input type="email" id="emailForm"><br/>
-            <button class="btn submit" onclick="submit()">SUBMIT</button>
-        </form>
-    </div>
-    <script src="portofolio.js"></script>
+
+    <script src="./portofolio.js"></script>
 </body>
 
 </html>
